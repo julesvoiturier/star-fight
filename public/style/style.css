@@ -1,0 +1,188 @@
+body{
+    font-family: arial;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 99vh;
+}
+
+#titleDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#titleImg{
+    width: 20%;
+}
+
+#selectAFighter{
+    margin: 0;
+    margin-top: 50px;
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+.fighters{
+    margin-top: 0px;
+    width: 55%;
+    height: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    /* background-color: red; */
+}
+
+.fighter{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* transition: 2s; */
+}
+
+.fighter1{
+    /* transition: 2s; */
+}
+
+.fighter2{
+    /* transition: 2s; */
+}
+
+.fighter1Test{
+    width: 250px;
+    aspect-ratio: 1/1;
+    outline: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 100%;
+}
+
+.fighter2Test{
+    width: 250px;
+    aspect-ratio: 1/1;
+    outline: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 100%;
+}
+
+.fighter p {
+    margin: 0;
+    margin-top: 10px;
+    letter-spacing: 6px;
+    word-spacing: 6px;
+}
+
+#startGame{
+    margin-top: 20px;
+    letter-spacing: 6px;
+    text-decoration: none;
+    color: black;
+    /* border-bottom: 1px solid black; */
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 0.5s;
+}
+
+#startGameHover{
+    position: absolute;
+    /* border-top: 1px solid black; */
+    width: 85%;
+    height: 90%;
+    left: 0;
+    /* bottom: -38.75px; */
+    bottom: -30.75px;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+    background-color: rgb(250, 255, 212);
+    border-top: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#startGame:hover{
+    border-bottom: none;
+    color: rgb(0, 0, 0);
+    #startGameHover{
+        bottom: 0px;
+        z-index: -1;
+
+    }
+}
+
+.theChosenOne{
+    outline: 2px solid rgb(97, 255, 121) !important;
+}
+
+
+
+/*! ----------------------------------------------------------- */
+
+.healthBar{
+    position: relative;
+    width: 50%;
+    height: 5px;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.actualHealth{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(97, 255, 121);
+    right: 0%;
+    transition: 0.3s;
+    
+}
+
+.splitFighters{
+    width: 100% !important;
+}
+
+#attacks{
+    width: 43%;
+    height: 4%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#attacks button{
+    width: 100%;
+    background-color: white;
+    border-style: none;
+    outline: 1px solid black;
+    transition: 0.1s;
+    letter-spacing: 6px;
+    font-size: 13px;
+}
+
+#attacks button:hover{
+    width: 100%;
+    background-color: rgb(250, 255, 212);
+    color: rgb(0, 0, 0);
+    border-style: none;
+    outline: 1px solid black;
+}
+
+#fightMessages{
+    /* background-color: red; */
+    height: 30px;
+    width: 30%;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 6px;
+}
