@@ -176,13 +176,29 @@ body{
     outline: 1px solid black;
 }
 
-#fightMessages{
-    /* background-color: red; */
+#fightMessagesDiv{
+    position: relative;
     height: 30px;
     width: 30%;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+#fightMessages{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
     letter-spacing: 6px;
+    bottom: -30px;
+    transition: 0.2s;
+}
+
+.messageAnimation{
+    bottom: 0px !important;
 }

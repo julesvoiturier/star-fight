@@ -8,15 +8,19 @@ export let otherAttack = () => {
     switch (randomAttack) {
         case 1:
             INSTANCE.otherFighter1.attack1(INSTANCE.fighter1)
+            INSTANCE.fightMessages.innerHTML = "FIGHTER 2 USES ATTACK 1"
             break;
         case 2:
             INSTANCE.otherFighter1.attack2(INSTANCE.fighter1)
+            INSTANCE.fightMessages.innerHTML = "FIGHTER 2 USES ATTACK 2"
             break;
         case 3:
             INSTANCE.otherFighter1.attack3(INSTANCE.fighter1)
+            INSTANCE.fightMessages.innerHTML = "FIGHTER 2 USES ATTACK 3"
             break;
         case 4:
             INSTANCE.otherFighter1.attack4(INSTANCE.fighter1)
+            INSTANCE.fightMessages.innerHTML = "FIGHTER 2 USES ATTACK 4"
             break;
     }
 
@@ -32,7 +36,7 @@ export let otherAttack = () => {
             INSTANCE.yourHealthBar.style.background = "rgb(255, 231, 48)"
         }
         INSTANCE.yourHealthBar.style.right = `${ratio}%`
-    }, 4000);
+    }, 1000);
 
 
 }
@@ -40,18 +44,21 @@ export let otherAttack = () => {
 
 export let attack = (x) => {
     if (x.id == "attack1") {
-
+        INSTANCE.fightMessages.innerHTML = "YOU USE ATTACK 1"
         INSTANCE.fighter1.attack1(INSTANCE.otherFighter1)
 
     } else if (x.id == "attack2") {
+        INSTANCE.fightMessages.innerHTML = "YOU USE ATTACK 2"
         INSTANCE.fighter1.attack2(INSTANCE.otherFighter1)
         console.log(INSTANCE.otherFighter1.healthPoints);
 
     } else if (x.id == "attack3") {
+        INSTANCE.fightMessages.innerHTML = "YOU USE ATTACK 3"
         INSTANCE.fighter1.attack3(INSTANCE.otherFighter1)
         console.log(INSTANCE.otherFighter1.healthPoints);
 
     } else if (x.id == "attack4") {
+        INSTANCE.fightMessages.innerHTML = "YOU USE ATTACK 4"
         INSTANCE.fighter1.attack4(INSTANCE.otherFighter1)
         console.log(INSTANCE.otherFighter1.healthPoints);
     }
@@ -72,7 +79,9 @@ export let attack = (x) => {
         INSTANCE.othersHealthBar.style.right = `${ratio}%`
     }, 1000);
 
-    otherAttack()
+    setTimeout(() => {
+        otherAttack()
+    }, 3000);
     
 }
 

@@ -12,13 +12,24 @@ INSTANCE.choseFighter2.addEventListener("click", () => {
     INSTANCE.choseFighter2.previousElementSibling.firstElementChild.classList.remove("theChosenOne")
 })
 
+// INSTANCE.startGame.addEventListener("click", () => {
+//     INSTANCE.choseFighter1.style.pointerEvents = "none"
+//     INSTANCE.choseFighter2.style.pointerEvents = "none"
+// })
+
 let startsFirst = Math.floor(Math.random() * 2) + 1
 if (startsFirst == 1) {
-    console.log("he starts");
-    // INSTANCE.attackButtons.style.pointerEvents = "none"
-    FUNCTION.otherAttack()
+    INSTANCE.fightMessages.innerHTML = "FIGHTER 2 STARTS"
+    INSTANCE.fightMessages.classList.add("messageAnimation")
+    setTimeout(() => {
+        // INSTANCE.attackButtons.style.pointerEvents = "none"
+        INSTANCE.fightMessages.classList.remove("messageAnimation")
+        FUNCTION.otherAttack()
+    }, 3000);
+} else if (startsFirst == 2){
+        INSTANCE.fightMessages.innerHTML = "YOU START"
 }
-startsFirst = 1
+startsFirst = 3
 
 INSTANCE.attackButtons.addEventListener("click", (e) => {
     let button = e.target

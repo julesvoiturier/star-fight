@@ -51,3 +51,6 @@ export let othersHealthRatio = 100 // %
 
 // GAME RUNNING
 export let game = true
+
+// FIGHTM ESSAGES
+export let fightMessages = document.querySelector("#fightMessages")
