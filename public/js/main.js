@@ -32,6 +32,8 @@ if (startsFirst == 1) {
 startsFirst = 3
 
 INSTANCE.attackButtons.addEventListener("click", (e) => {
+    INSTANCE.fightMessages.classList.add("messageAnimation")
+
     let button = e.target
     FUNCTION.attack(button)
 })
