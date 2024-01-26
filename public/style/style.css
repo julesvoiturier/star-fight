@@ -6,6 +6,16 @@ body{
     align-items: center;
     justify-content: center;
     height: 99vh;
+    background: rgb(255, 255, 255);
+}
+
+#menu{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #titleDiv{
@@ -27,8 +37,8 @@ body{
 }
 
 .fighters{
-    margin-top: 0px;
-    width: 55%;
+    margin-top: 30px;
+    width: 50%;
     height: 50%;
     /* border: 1px solid black; */
     display: flex;
@@ -54,7 +64,7 @@ body{
 }
 
 .fighter1Test{
-    width: 250px;
+    width: 65%;
     aspect-ratio: 1/1;
     outline: 1px solid black;
     margin-bottom: 20px;
@@ -62,7 +72,7 @@ body{
 }
 
 .fighter2Test{
-    width: 250px;
+    width: 65%;
     aspect-ratio: 1/1;
     outline: 1px solid black;
     margin-bottom: 20px;
@@ -89,6 +99,7 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     transition: 0.5s;
+
 }
 
 #startGameHover{
@@ -102,7 +113,7 @@ body{
     transition: 0.1s;
     display: flex;
     align-items: center;
-    background-color: rgb(250, 255, 212);
+    background-color: rgb(254, 255, 212);
     border-top: 1px solid black;
     padding-left: 10px;
     padding-right: 10px;
@@ -118,6 +129,18 @@ body{
     }
 }
 
+.buttonsBottom{
+    display: flex;
+    gap: 20px;
+}
+
+.buttonsBottom button{
+    display: flex;
+    gap: 20px;
+    width: 165px;
+    justify-content: center
+}
+
 .theChosenOne{
     outline: 2px solid rgb(97, 255, 121) !important;
 }
@@ -125,6 +148,15 @@ body{
 
 
 /*! ----------------------------------------------------------- */
+
+#game{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .healthBar{
     position: relative;
@@ -152,7 +184,7 @@ body{
 
 #attacks{
     width: 43%;
-    height: 4%;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
@@ -160,7 +192,7 @@ body{
 
 #attacks button{
     width: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-style: none;
     outline: 1px solid black;
     transition: 0.1s;
@@ -170,16 +202,33 @@ body{
 
 #attacks button:hover{
     width: 100%;
-    background-color: rgb(250, 255, 212);
+    background-color: rgb(254, 255, 212);
     color: rgb(0, 0, 0);
     border-style: none;
     outline: 1px solid black;
 }
 
+
+.firstButton{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+
+.lastButton{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#startGame{
+    background: none;
+    border: none;
+}
+
 #fightMessagesDiv{
     position: relative;
     height: 30px;
-    width: 30%;
+    width: 21%;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
@@ -201,4 +250,28 @@ body{
 
 .messageAnimation{
     bottom: 0px !important;
+}
+
+.unclickable{
+    pointer-events: none;
+}
+
+
+#explainAttacks{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 6px;
+}
+
+#explainAttacks div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 25px;
+    text-align: center;
 }
