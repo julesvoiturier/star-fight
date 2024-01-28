@@ -1,18 +1,24 @@
 import * as CLASS from './class.js'
 
+// BODY
+export let body = document.querySelector("body")
+
 
 // HEROS
 export let fighter1 = null
 export let fighterChoice1 = new CLASS.Character1 ("DEMOLISHER", 100, 500, 500, "LASERBEAM", "MACHINEGUN", "STARSHIELD", "LIGHTSPEED" )
-export let fighterChoice2 = new CLASS.Character2 ("James", 100, 400, 400, "LASERBOMB", "STARSWORD", "MAGNETAR", "DARKMATTER")
+export let fighterChoice2 = new CLASS.Character2 ("James", 100, 500, 500, "LASERBOMB", "STARSWORD", "MAGNETAR", "DARKMATTER")
 
 // BOSSES
 export let otherFighterN1 = new CLASS.OtherFighter ("ENEMY-1", 50, 500, 500, "LASERBOMB", "STARSWORD", "LIGHTSPEED", "DARKMATTER"  )
-export let otherFighterN2 = new CLASS.OtherFighter ("ENEMY-2", 50, 500, 500, "LASERBEAM", "MACHINEGUN", "STARSHIELD", "MAGNETAR" )
+export let otherFighterN2 = new CLASS.OtherFighterBis ("ENEMY-2", 50, 500, 500, "LASERBEAM", "MACHINEGUN", "STARSHIELD", "MAGNETAR" )
 
 // CHOOSE FIGHTER
 export let choseFighter1 =document.querySelector(".fighter1")
 export let choseFighter2 =document.querySelector(".fighter2")
+
+export let fighterN1 = document.querySelectorAll(".fighter1Test")[1]
+export let fighterN2 = document.querySelectorAll(".fighter2Test")[1]
 
 
 // ATTACK BUTTONS
@@ -28,6 +34,9 @@ export let button4 = document.querySelector("#attack4")
 export let yourHealthBar = document.querySelector(".fighter1 .healthBar .actualHealth")
 export let othersHealthBar = document.querySelector(".fighter2 .healthBar .actualHealth")
 
+export let lifePercentage1 = document.querySelector("#lifePercentage1")
+export let lifePercentage2 = document.querySelector("#lifePercentage2")
+
 // START GAME BUTTON
 export let startGame = document.querySelector("#startGame")
 export let startAgain = document.querySelector(".startAgain")
@@ -42,6 +51,16 @@ export let fightMessages = document.querySelector("#fightMessages")
 export let menu = document.querySelector("#menu")
 export let game = document.querySelector("#game")
 export let detailsSection = document.querySelector("#explainAttacks")
+export let finalResult = document.querySelector("#finalResult")
+export let finalResultDisplay = document.querySelector("#finalResultDisplay")
+
+
+// ANIMATIONS DIV
+export let animation = document.querySelector(".animations")
+
+// SOUNDTRACK
+export let soundtrack = document.querySelector("#soundtrack")
+
 
 
 
@@ -59,9 +78,11 @@ startGame.addEventListener("click", () => {
     switch (randomFighter) {
         case 1:
             otherFighter1 = otherFighterN1
+            fighterN2.classList.add("fightPosition2")
             break;
         case 2:
             otherFighter1 = otherFighterN2
+            fighterN2.classList.add("fightPosition2Bis")
             break;
         // case 3:
         //     otherFighter1 = otherFighterN3

@@ -26,23 +26,22 @@ body{
 }
 
 #titleImg{
-    width: 20%;
+    width: 25%;
 }
 
 #selectAFighter{
     margin: 0;
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     letter-spacing: 6px;
 }
 
 .fighters{
-    margin-top: 30px;
-    width: 50%;
+    margin-top: 20px;
+    width: 55%;
     height: 50%;
-    /* border: 1px solid black; */
     display: flex;
-    /* background-color: red; */
+    align-items: center;
 }
 
 .fighter{
@@ -51,16 +50,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* transition: 2s; */
-}
-
-.fighter1{
-    /* transition: 2s; */
-}
-
-.fighter2{
-    /* transition: 2s; */
+    justify-content: center; 
 }
 
 .fighter1Test{
@@ -69,7 +59,25 @@ body{
     outline: 1px solid black;
     margin-bottom: 20px;
     border-radius: 100%;
+    transition: 0.1s;
+    background-image: url(./../src/img/starship1.svg);
+    background-size: 230%;
+    background-position: center;
 }
+
+.fightPosition1{
+    background-image: url(./../src/img/starship1.svg) !important;
+    background-size: 300% !important;
+    transform: rotateZ(90deg) !important;
+    outline: none;
+} 
+
+.fightPosition1Bis{
+    background-image: url(./../src/img/starship2.svg) !important;
+    background-size: 300% !important;
+    transform: rotateZ(90deg) !important;
+    outline: none;
+} 
 
 .fighter2Test{
     width: 65%;
@@ -77,7 +85,25 @@ body{
     outline: 1px solid black;
     margin-bottom: 20px;
     border-radius: 100%;
+    transition: 0.1s;
+    background-image: url(./../src/img/starship2.svg);
+    background-size: 230%;
+    background-position: center;
 }
+
+.fightPosition2{
+    background-image: url(./../src/img/enemyShip1.svg) !important;
+    background-size: 300% !important;
+    transform: rotateZ(-90deg) !important;
+    outline: none;
+} 
+
+.fightPosition2Bis{
+    background-image: url(./../src/img/enemyShip2.svg) !important;
+    background-size: 300% !important;
+    transform: rotateZ(-90deg) !important;
+    outline: none;
+} 
 
 .fighter p {
     margin: 0;
@@ -87,34 +113,32 @@ body{
 }
 
 #startGame{
-    margin-top: 20px;
+    margin-top: 10px;
     letter-spacing: 6px;
     text-decoration: none;
     color: black;
-    /* border-bottom: 1px solid black; */
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 13px;
     position: relative;
     overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
-    transition: 0.5s;
+    transition: 0.1s;
+    text-align: center;
+    width: 180px;
 
 }
 
 #startGameHover{
     position: absolute;
-    /* border-top: 1px solid black; */
-    width: 85%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     left: 0;
-    /* bottom: -38.75px; */
-    bottom: -30.75px;
+    bottom: -38.75px;
     transition: 0.1s;
     display: flex;
     align-items: center;
-    background-color: rgb(254, 255, 212);
-    border-top: 1px solid black;
+    background-color: rgb(0, 0, 0);
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -122,6 +146,7 @@ body{
 #startGame:hover{
     border-bottom: none;
     color: rgb(0, 0, 0);
+    color: white;
     #startGameHover{
         bottom: 0px;
         z-index: -1;
@@ -131,18 +156,25 @@ body{
 
 .buttonsBottom{
     display: flex;
-    gap: 20px;
+    gap: 0px;
 }
 
 .buttonsBottom button{
+
     display: flex;
     gap: 20px;
-    width: 165px;
-    justify-content: center
+    width: 180px;
+    justify-content: center;
+    text-align: center;
+}
+
+.resume{
+    width: 170px !important;
 }
 
 .theChosenOne{
-    outline: 2px solid rgb(97, 255, 121) !important;
+    filter: invert(1);
+    background-color: white;
 }
 
 
@@ -161,7 +193,7 @@ body{
 .healthBar{
     position: relative;
     width: 50%;
-    height: 5px;
+    height: 8px;
     border: 1px solid black;
     margin-bottom: 50px;
     overflow: hidden;
@@ -176,6 +208,153 @@ body{
     right: 0%;
     transition: 0.3s;
     
+}
+
+#lifePercentage1{
+    margin-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+#lifePercentage2{
+    margin-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.animations{
+    width: 50%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.laserBeam1{
+    background-image: url(./../src/img/laserbeam.svg) !important;
+    background-size: 300% !important;
+    background-position-y: 42% !important;
+    background-position-x: 80% !important;
+}
+
+.laserBeam2{
+    background-image: url(./../src/img/laserbeam2.svg) !important;
+    background-size: 300% !important;
+    background-position-y: 42% !important;
+    background-position-x: 20% !important;
+}
+
+.machinegun{
+    background-image: url(./../src/img/machinegun.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 37.5% !important;
+}
+
+.magnetar{
+    background-image: url(./../src/img/magnetar.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+.darkmatter{
+    background-image: url(./../src/img/darkmartter.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+.laserbomb{
+    background-image: url(./../src/img/laserbomb.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+.starsword1{
+    background-image: url(./../src/img/starsword1.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+.starsword2{
+    background-image: url(./../src/img/starsword2.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+.starshield1{
+    background-image: url(./../src/img/starshield1.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+.starshield2{
+    background-image: url(./../src/img/starshield2.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+.lightspeed{
+    background-image: url(./../src/img/lightspeed.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+.lightspeed2{
+    background-image: url(./../src/img/lightspeed2.svg) !important;
+    background-size: 250% !important;
+    background-position-y: 42% !important;
+    background-position-x: 0% !important;
+}
+
+#leftAnimationDiv{
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: -200%;
+    transition: 0.5s linear;
+}
+
+#rightAnimationDiv{
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    right: 0%;
+    transition: 0.5s linear;
+}
+
+.youAttack{
+    #leftAnimationDiv{
+        left: 0%;
+    }
+    #rightAnimationDiv{
+        right: -200%;
+    }
+}
+
+.heAttacks{
+    #leftAnimationDiv{
+        left: -200%;
+    }
+    #rightAnimationDiv{
+        right: 0%;
+    }
+}
+
+.blink{
+    background-image: none !important;
+}
+
+.attackmove{
+    width: 70% !important;
 }
 
 .splitFighters{
@@ -202,8 +381,8 @@ body{
 
 #attacks button:hover{
     width: 100%;
-    background-color: rgb(254, 255, 212);
-    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border-style: none;
     outline: 1px solid black;
 }
@@ -274,4 +453,21 @@ body{
     flex-direction: column;
     line-height: 25px;
     text-align: center;
+}
+
+#finalResult{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#finalResultDisplay{
+    padding-left: 50px;
+    letter-spacing: 50px;
+    font-size: 15px;
+    /* border-bottom: 1px solid black; */
+    margin-bottom: 50px;
 }

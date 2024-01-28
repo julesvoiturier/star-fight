@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <audio id="soundtrack" src="./public/src/audio/M52t5.mp3"></audio>
+
     <section id="menu">
         <div id="titleDiv">
             <img id="titleImg" src="./public/src/img/sciFightTitle.png" alt="">
@@ -16,19 +18,17 @@
     
         <div class="fighters">
             <div class="fighter1 fighter">
-                <!-- <img class="fighterImg" src="" alt=""> -->
                 <div class="fighter1Test"></div>
-                <p>HEALTH POINTS : 140</p>
-                <p>MAX ATTACK POINTS : 100</p>
-                <p>TYPE : FIRE</p>
+                <p>ASTRALIS</p>
+                <p>HEALTH POINTS : 500</p>
+                <p>MAX ATTACK POINTS : 140</p>
             </div>
     
             <div class="fighter2 fighter">
-                <!-- <img class="fighterImg" src="" alt=""> -->
                 <div class="fighter2Test"></div>
-                <p>HEALTH POINTS : 200</p>
-                <p>MAX ATTACK POINTS : 50</p>
-                <p>TYPE : WATER</p>
+                <p>NOSTROMO</p>
+                <p>HEALTH POINTS : 500</p>
+                <p>MAX ATTACK POINTS : 150</p>
             </div>
         </div>
 
@@ -47,13 +47,20 @@
     <section id="game">
         <div class="fighters">
             <div class="fighter1 fighter">
+                <div id="lifePercentage1">500</div>
                 <div class="yourHealthBar healthBar" id="yourHealthBar">
                     <div class="actualHealth"></div>
                 </div>
                 <div class="fighter1Test"></div>
             </div>
+
+            <div class="animations">
+                <div id="leftAnimationDiv"></div>
+                <div id="rightAnimationDiv"></div>
+            </div>
     
             <div class="fighter2 fighter">
+                <div id="lifePercentage2">500</div>
                 <div class="othersHealthBar healthBar" id="othersHealthBar">
                     <div class="actualHealth"></div>
                 </div>
@@ -72,13 +79,6 @@
             <button id="attack4" class="buttonAttack lastButton"></button>
         </div>
     
-        <!-- <div id="attacks2">
-            <button id="2attack1" class="buttonAttack">ATTACK 1</button>
-            <button id="2attack2" class="buttonAttack">ATTACK 2</button>
-            <button id="2attack3" class="buttonAttack">ATTACK 3</button>
-            <button id="2attack4" class="buttonAttack">ATTACK 4</button>
-        </div> -->
-    
         <div class="buttonsBottom">
             <button class="startAgain" id="startGame">RESTART
                 <div id="startGameHover"></div>
@@ -95,22 +95,26 @@
 
     <section id="explainAttacks">
         <div class="yourAttacksExplained">
-            <!-- <div><b>CHARACTER 1</b><br></div> -->
-            <div><b>LASERBEAM:</b> INFLICTS 50 DAMAGE POINTS  - MAX 5 TIMES<br><br></div>
-            <div><b>STARSHIELD:</b> REDUCES ENEMY STRIKE BY 50 PERCENT ON NEXT ROUND - MAX 5 TIMES<br><br></div>
-            <div><b>MACHINEGUN:</b> INFLICTS 30 DAMAGE POINTS FROM 1 TO 3 TIMES IN A ROW - MAX 5 TIMES<br><br></div>
-            <div><b>LIGHTSPEED:</b> INFLICTS 50 DAMAGE POINTS + REDUCES ENEMY MAX HEALTH BY 30 PERCENT - MAX 1 TIME <br><br></div>
-            <!-- <div><b>CHARACTER 2</b><br></div> -->
-            <div><b>LASERBOMB:</b> INFLICTS 80 DAMAGE POINTS TO THE ENEMY BUT YOU LOOSE 40 HEALTH POINTS - MAX 2 TIMES<br><br></div>
-            <div><b>STARSWORD:</b> INFLICTS 20 DAMAGE POINTS BUT 1/10 CHANCE TO INFLICT 100 DAMAGE POINTS <br><br></div>
-            <div><b>MAGNETAR:</b> INFLICTS 20 DAMAGE POINTS GIVES YOU 20 HEALTH POINTS<br><br></div>
-            <div><b>DARKMATTER:</b> 1/50 CHANCES TO DESTROY THE ENEMY <br><br></div>
+            <div><b>LASERBEAM</b> INFLICTS 80 DAMAGE POINTS TO THE ENEMY<br><br></div>
+            <div><b>STARSHIELD</b> USING IT INSTANTLY GIVES YOU BACK 70 HEALTH POINTS<br><br></div>
+            <div><b>MACHINEGUN</b> INFLICTS 40 DAMAGE POINTS RANDOMLY FROM 1 TO 3 TIMES IN A SINGLE USE<br><br></div>
+            <div><b>LIGHTSPEED</b> INFLICTS 70 DAMAGE POINTS + REDUCES MAX HEALTH OF THE OPPONENT BY 10 POINTS <br><br></div>
+            <div><b>LASERBOMB</b> INFLICTS 150 DAMAGE POINTS TO THE ENEMY BUT MAKES YOU LOOSE 100 HEALTH POINTS<br><br></div>
+            <div><b>STARSWORD</b> INFLICTS 100 DAMAGE POINTS BUT 1/3 CHANCE TO INFLICT NO DAMAGES AT ALL <br><br></div>
+            <div><b>MAGNETAR</b> INFLICTS 60 DAMAGE POINTS AND GIVES YOU BACK 50 HEALTH POINTS<br><br></div>
+            <div><b>DARKMATTER</b> INFLICTS 50 DAMAGES BUT 1/15 CHANCE TO ONE SHOT<br><br></div>
         </div>
         <button class="resume" id="startGame">RESUME
             <div id="startGameHover"></div>
         </button>
     </section>
+
+    <!--! ----------------------------------------------------------------------------------- -->
     
+    <section id="finalResult">
+        <div id="finalResultDisplay">YOU WIN</div>
+    </section>
+
 
     <script type="module" src="./public/js/main.js"></script>
 </body>
